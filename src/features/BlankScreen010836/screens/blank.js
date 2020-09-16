@@ -22,7 +22,7 @@ export class _Blank extends React.Component {
     }
   }
 
-  state = { Input_3: "", Input_5: "" }
+  state = { CheckBox_3: true, Input_5: "" }
 
   render = () => (
     <View
@@ -58,19 +58,10 @@ export class _Blank extends React.Component {
         backgroundSize: "auto"
       }}
     >
-      <Input
-        placeholder="Sample text input placeholder"
-        editable={true}
-        multiline={true}
-        textStyle={{
-          height: 100,
-          fontSize: 12,
-          color: "#000000",
-          textAlign: "left",
-          fontFamily: "Roboto-Regular"
-        }}
+      <CheckBox
+        text="Checkbox"
+        disabled={false}
         style={{
-          width: "100%",
           marginLeft: 0,
           marginRight: 0,
           marginTop: 5,
@@ -80,10 +71,6 @@ export class _Blank extends React.Component {
           paddingTop: 5,
           paddingBottom: 5,
           overflow: "visible",
-          fontSize: 12,
-          color: "#000000",
-          backgroundColor: "#ffffff",
-          fontFamily: "Roboto-Regular",
           borderColor: "#000000",
           borderStyle: "solid",
           borderWidth: 0,
@@ -99,15 +86,13 @@ export class _Blank extends React.Component {
           lineHeight: 12,
           letterSpacing: 0
         }}
-        value={this.state.Input_3}
-        onChangeText={nextValue => this.setState({ Input_3: nextValue })}
+        checked={this.state.CheckBox_3}
+        onChange={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <Input
         placeholder="Sample text input placeholder"
         editable={true}
-        multiline={true}
         textStyle={{
-          height: 100,
           fontSize: 12,
           color: "#000000",
           textAlign: "left",
