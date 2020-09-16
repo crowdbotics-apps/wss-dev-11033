@@ -90,7 +90,7 @@ export class _Blank extends React.Component {
         onChange={nextChecked => this.setState({ CheckBox_3: nextChecked })}
       />
       <Input
-        placeholder="Sample text input placeholder"
+        placeholder="Aura text input placeholder"
         editable={true}
         textStyle={{
           fontSize: 12,
